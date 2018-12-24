@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <title>6666專業角色商城</title>
+
+    <!-- 換照JS -->
+    <script>
+        // 死亡之握
+        function MAchange() {
+
+            document.getElementById("MAphoto").src = "IMG/hand.jpg";
+        }
+        // 取消死亡之握
+        function reMA() {
+            document.getElementById("MAphoto").src = "http://www.thinkingtaiwan.com/sites/default/files/images/insert/policy/6185bc4adf86590fb6365222763b0d08.jpg";
+        }
+        // 修女
+        function bigmama() {
+            document.getElementById("section4").style.backgroundImage = "url(IMG/default.jpg)";//改变背景图片
+        }
+        function rebigmama() {
+            document.getElementById("section4").style.backgroundImage = "url()";//改变背景图片
+        }
+
+        // BELL
+        function dark() {
+
+            document.getElementById("bell").src = "IMG/cry.jpg";
+            document.getElementById("heheder").style.display = "block";
+
+        }
+
+
+        // 鋼彈英
+        function bollIn() {
+
+            document.getElementById("littleinin").src = "IMG/600.jpg";
+            document.getElementById("heheder").style.display = "none";
+            document.getElementById("bell").src = "IMG/03.jpg";
+        }
+
+        //Let it go
+        function sing() {
+            var videogo = document.getElementById("govideo");
+            videogo.play();
+            document.getElementById("youtube_letitgo").style.display = "block";
+        }
+
+        // 還原全世界
+        function REworld() {
+            document.getElementById("youtube_letitgo").style.display = "none";
+            document.getElementById("littleinin").src = "IMG/tenor.gif";
+
+            var video = document.getElementById("govideo");
+            video.pause();
+            video.currentTime = 0;
+
+        }
+
+
+    </script>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("");
+            background-size: contain;
+            background-position: 0 0;
+
+        }
+       
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+
+
+
+        /* 副選單 */
+        #sub_nav {
+            background-color: black;
+            color: #E7D67C;
+            font-weight: 700;
+            padding-left: 40%;
+            height: 50px;
+        }
+
+        #sub_nav p {
+            float: left;
+            letter-spacing: 5px;
+            font-size: 18px;
+        }
+
+        #sub_nav img {
+            width: 100px;
+            height: 50px;
+            float: left;
+        }
+
+        /* 副選單特效 */
+        @-webkit-keyframes rubberBand {
+        from {
+            transition-duration: time;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+
+        30% {
+            -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+        }
+
+        40% {
+            -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+        }
+
+        50% {
+            -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+        }
+
+        65% {
+            -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+        }
+
+        75% {
+            -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+        }
+
+        to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+        }
+
+        @keyframes rubberBand {
+        from {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+
+        30% {
+            -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+        }
+
+        40% {
+            -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+        }
+
+        50% {
+            -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+        }
+
+        65% {
+            -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+        }
+
+        75% {
+            -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+        }
+
+        to {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+        }
+
+        .rubberBand {
+        -webkit-animation-name: rubberBand;
+        animation-name: rubberBand;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        }
+
+        /* 淡入淡出特效 */
+
+
+
+
+
+        /* Banner */
+        #bg_banner {
+            height: calc(100vh - 50px);
+            width: 100%;
+            background-image: url("https://www.porticomedia.com/sites/default/files/%E5%A5%BD%E8%90%8A%E5%A1%A2%E4%B9%8B%E6%9C%80.jpg");
+            background-size: cover;
+            background-position: center;
+            
+
+        }
+
+        .abc{
+            transition-delay: 5s;
+            height: calc(100vh - 50px);
+            width: 100%;
+            opacity: 0.5;
+        }
+
+
+        /* 主選單 */
+        #main_nav {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: rgb(43, 41, 41);
+            padding-left: 39%;
+
+        }
+
+        #main_nav .nav_link {
+            color: #E7D67C;
+            display: block;
+            float: left;
+            padding: 10px 20px;
+            text-align: center;
+
+
+        }
+
+        #main_nav .nav_link:hover {
+            border-bottom: 3px solid #E7D67C;
+
+        }
+
+
+        /* 區塊1 ，左圖右字  馬英九*/
+        #section1 {
+            padding: 70px 0;
+            height: 100%;
+            width: 100%;
+            background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/background-terror-11.jpg");
+            background-size: cover;
+            background-position: 0 47%;
+            overflow: hidden;
+        }
+
+        #section1 .leftbox {
+            width: 50%;
+            float: left;
+            padding: 30px 50px;
+            text-align: justify;
+        }
+
+        #ROC-633 {
+            background-color: rgba(223, 220, 204, 0.6);
+        }
+
+        #section1 .leftbox p {
+            margin: 0;
+        }
+
+        #section1 .leftbox span {
+            font-weight: 900;
+            color: rgb(94, 23, 105);
+            font-size: 25px;
+        }
+
+        #section1 .leftbox h4 {
+            margin: 0;
+            font-weight: 500;
+            width: 18%;
+        }
+
+        #section1 .leftbox h4:hover {
+            color: rgb(255, 15, 15);
+            font-size: 20px;
+        }
+
+        /* 區塊5 ，parallax 小丑*/
+        #section5 {
+            width: 100%;
+            height: 100vh;
+            background-image: url("IMG/MAIN-NAP_MDG_150317IT_965ITJPG.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        #section5 .container {
+
+            padding: 250px 10%;
+            color: white;
+        }
+
+        #intro {
+            width: 50%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        #section5 span {
+            color: rgb(255, 36, 36);
+            font-weight: 900;
+            font-size: 25px;
+        }
+
+
+        /* 區塊4 ，文字置中 鬼修女*/
+
+        #section4 {
+            padding: 70px 0;
+            width: 100%;
+            height: 80vh;
+            background-image: url("");
+            background-size: cover;
+            background-position: 0 -200px;
+        }
+        #section4 span {
+            color: rgb(255, 36, 36);
+            font-weight: 900;
+            font-size: 25px;
+        }
+        #section4 .container h4 {
+            width: 42%;
+        }
+        #section4 h1 {
+            text-align: center;
+        }
+
+        #section4 p {
+            text-align: justify;
+        }
+       #section4 .container{
+            background-color: rgba(253, 253, 253, 0.4);
+            padding:20px;
+        
+       }
+    
+
+        /* 區塊3，圖文小卡3份均分  婦愁者*/
+        #section3 {
+            padding: 80px 0;
+            height: 100%;
+            width: 100%;
+            background-image: url("IMG/17027929.jpg");
+            background-size: cover;
+            background-position: 0 0;
+            overflow: hidden;
+        
+        }
+
+        #section3 .container .leftbox {
+            width: 33.33%;
+            overflow: hidden;
+            float: left;
+            padding: 0 20px;
+        }
+
+        #section3 .container .leftbox img {
+            width: 100%;
+        }
+
+        #section3 span {
+            color: rgb(255, 36, 36);
+            font-weight: 900;
+            font-size: 25px;
+        }
+        #bell_h4{
+            width: 52%;
+        }
+
+        #letitgo{
+            width: 75%;
+        }
+       
+        /* footer */
+        footer {
+            background-color: #333;
+            color: aliceblue;
+            padding: 2px 0;
+            font-size: 11px;
+        }
+
+        footer .container {
+            text-align: center;
+        }
+
+        /* 壞軌 */
+        #heheder{
+            /* 穿透DIV，可點選到下層內容 */
+            pointer-events: none;
+            
+            background-image: url("IMG/brock.jpg");
+            background-size: cover;
+            overflow: hidden;
+            opacity: 0.7;
+            z-index: 999;
+            width: 100VW;
+            height: 100vh;
+            position: fixed;
+            display: none;
+            
+        }
+
+        /* 偽燈箱 */
+
+        #youtube_letitgo{
+
+            background-color: rgb(0,0,0,0.7);;
+            z-index: 9999;
+            width: 100VW;
+            height: 100vh;
+            position: fixed;
+            display: none;
+            
+            
+        }
+
+        #govideo{
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+
+
+
+</head>
+
+
+
+
+
+
+<body>
+
+    <!-- 遮罩特效 -->
+    <div id="youtube_letitgo" onclick="REworld()">
+        <video id="govideo" autoplay loop muted controls style="background-image:url(>)">
+            <source src="itgo.mp4" type="video/mp4"></video>
+    </div>
+    <div id="heheder"></div>
+
+
+    <!-- 副選單 -->
+    <nav id="sub_nav">
+        <img src="https://img.isuper.tv/Featured-IMG/2016/01/hollywood-movie-live.jpg" alt="">
+        <p class="rubberBand">6666 專業角色商城</p>
+        <div class="clearfix"></div>
+    </nav>
+
+    <!-- 圖片Banner+parallax -->
+    <div id="bg_banner">
+        <video class="abc" autoplay loop muted con style="background-image:url(>)">
+            <source src="01.mp4" type="video/mp4"></video>
+    </div>
+
+
+    <!-- 主選單，釘選(a+錨點) -->
+    <nav id="main_nav">
+        <div class="container">
+            <a class="nav_link" href="#section1">總統</a>
+            <a class="nav_link" href="#section5">小丑</a>
+            <a class="nav_link" href="#section4">修女</a>
+            <a class="nav_link" href="#section3">婦愁者聯盟</a>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+
+    <!-- 區塊1，左圖右字 -->
+    <section id="section1">
+        <div class="container">
+            <div class="leftbox">
+                <img id="MAphoto" src="http://www.thinkingtaiwan.com/sites/default/files/images/insert/policy/6185bc4adf86590fb6365222763b0d08.jpg"
+                    alt="">
+            </div>
+            <div id="ROC-633" class="leftbox">
+                <h1>ROC-633 : 馬英九</h1>
+                <h3>項目等級 : <span>Neutralized</span></h3>
+                <p>中華民國政治人物，曾任中華民國第12、13任總統
+                    畢業於國立臺灣大學法律學系，其後前往美國深造，獲紐約大學法學碩士學位、哈佛大學司法學博士學位。
+                    2002年以歷史新高的64%得票率再次當選，至今無人能破。
+                    <br>
+                    <br>
+                    <b>任期、歷程</b>
+                    <br>
+                    1999年921大地震，2001年納莉颱風災
+                    <br>
+                    <br>
+                    <b>限定必殺技</b>
+                    <br>
+                    <h4 onmouseover="MAchange()" onmouseout="reMA()">死亡之握</h4>
+
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <!-- 區塊5，parallax -->
+
+    <section id="section5">
+        <div class="container">
+            <div id="intro">
+                <h1>US-ME-027 : 跳舞小丑潘尼懷斯</h1>
+                <h3>項目等級 : <span>Keter</span></h3>
+                <p>
+                    1988年十月，緬因州德利鎮下水道裏，
+                    <br>
+                    小丑不是鬼魅，牠是一種可變形的怪物惡靈，牠就是心靈恐懼的反射。
+                    <br>
+                    牠就是嗜血恐懼的怪物，恐懼的氣味愈濃，牠愈活躍。
+                    <br>
+                    小丑每27年就會騷擾小鎮孩童。
+                    <br>
+                    <br>
+                    <h4>小朋友，要不要來一顆紅色氣球阿!</h4>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 區塊4，純文字置中 -->
+    <section id="section4">
+
+        <div class="container">
+            <h1>ROU-7262 : 修女瓦拉克</h1>
+            <h3>項目等級 : <span>Keter</span></h3>
+            <p>
+                1952年，在羅馬尼亞一間與世隔絕的卡拉塔修道院（Cârța
+                Monastery）中，有一個年輕的修女自殺了，梵蒂岡派出一名藏有悲慘過去的神父和一名剛入教的見習修女來調查這起神秘死亡事件，
+                他們一起揭開這個教團的邪惡祕密，遭到瓦拉克的攻擊和誘惑，神父被瓦拉克封棺材，最後被修女救回，並在書中找到瓦拉克。
+                之後修女被瓦拉克弄到迷失，但從中受到上帝的指引，卡拉塔修道院是一個知道很多邪術和魔鬼的卡拉爵士建立，在召喚期間突然被教會的人阻止，
+                並用耶穌基督的血封印，之後就把變成卡拉塔修道院。但被轟炸機炸毀了封印，瓦拉克又重新出來。
+
+                神父、修女和法裔加拿大人受瑪麗亞的指引找出被收藏的耶穌基督的血。修女被瓦拉克抓緊，在水中咬著耶穌基督的血，給瓦拉克空的聖球，
+                瓦拉克發現聖球是空並把全部目光專注在聖球裏，修女立刻用口中的耶穌基督的聖血再次封印瓦拉克，
+                誰知在打鬥中瓦拉克把部分的靈魂附在法裔加拿大人身上，令牠可以自由在人間來回。
+
+                <br>
+                <br>
+                <h4 onmouseover="bigmama()" onmouseout="rebigmama()">防禦咒語 : &nbsp天父 , 主耶穌, 聖靈, 我要奉靠主耶穌基督的名驅魔趕鬼!</h4>
+            </p>
+        </div>
+
+    </section>
+    <!-- 區塊3，圖文小卡3份均分 -->
+    <section id="section3">
+        <div class="container">
+            <div class="leftbox">
+                <img id="bell" src="IMG/03.jpg" alt="">
+                <p>
+                    <h1>USA-0112 : 安納貝爾</h1>
+                    <h3>項目等級 : <span>Thaumiel</span></h3>
+                    <br>
+                    <h4 id="bell_h4" onmouseover="dark()">防禦咒語 : 伊莎 (伊莎貝爾)</h4>
+                </p>
+            </div>
+            <div class="leftbox">
+                <img id="littleinin" src="https://media1.tenor.com/images/5638427cbc3b33ed03b553b58ce2befb/tenor.gif"
+                    alt="">
+                <p>
+                    <h1>ROC-1214 : 蔡英文</h1>
+                    <h3>項目等級 : <span style="color: rgb(14, 70, 255);">Euclid</span></h3>
+                    <br>
+                    <h4 id="helpweb" onmouseover="bollIn()">SS級咒語 : 小英魔咒</h4>
+                </p>
+            </div>
+            <div class="leftbox">
+                <img src="IMG/hqdefault.jpg" alt="">
+                <p>
+                    <h1>ROC-0000 : MC 美江</h1>
+                    <h3>項目等級 : <span style="color: rgb(14, 70, 255);">Euclid</span></h3>
+                    <br>
+                    <h4 id="letitgo" onclick="sing()">專武 : 勝利寶劍 &nbsp 鑽石召喚 &nbsp 靈的轉移</h4>
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 1911-6666&nbsp&nbsp 6666&nbsp專業角色商城 All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
