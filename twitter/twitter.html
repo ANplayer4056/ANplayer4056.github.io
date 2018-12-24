@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+
+    <style>
+        *{
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        body {
+            margin: 0;
+            margin-top: 50px;
+            height: 6200px;
+            background-image: url("Bgimg.png");
+        }
+
+        .navbar {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: white;
+            z-index: 99;
+            
+            
+        }
+        .navlink{
+            font-size: 13px;
+            color:rgb(102,127,117) ;
+            font-weight: 700;
+            margin-left: 20px;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            
+        }
+        
+        i.fa-twitter{
+            
+            color: #1DA1F2;
+            font-size: 18px;
+           
+        }
+        .clearfix {
+            clear: both;
+        }
+        .leftbox{
+            float: left;
+            line-height: 50px;
+            
+            height: 50px;
+        }
+        .rightbox{
+            float: right;
+            line-height: 50px;
+            height: 50px;
+        }
+        .rightbox:hover{
+           text-decoration: underline;
+        }
+        
+        .searchbox{
+            border: solid 1px #E6ECF0;
+            padding-left: 5px;
+            height: 30px;
+            border-radius: 15px;
+            font-size: 13px;
+            background-color: #F5F8FA;
+        }
+        /* 裁切圖片，Position調整位置 */
+        .banner{
+            width: 100%;
+            height: 500px;
+           background-image: url(HOMEE2.jpg);
+           background-size: cover;
+           background-position: 50% 75% ;
+           
+            
+        }
+        .selectbar{
+            height: 60px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+            position: sticky;
+            top: 70px;
+        }
+        .barleft{
+            height: 60px;
+            width: 30%;
+            line-height: 60px;
+            
+            float: left;
+            
+            
+        }
+        .barmid{
+            height: 60px;
+            width: 50%;
+            float: left;
+            padding-top: 10px;
+            
+        }
+        .barmid a{
+            display: block;
+            float: left;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 13px;
+            color:rgb(102,127,117) ;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        .barmid a:hover{
+            padding-bottom: 7px;
+            border-bottom: 3px solid #1DA1F2;
+            
+        }
+        /* 當CLASS1滑過時，指定CLASS2做動作寫法 */
+        .barmid a:hover span{
+            color:  #1DA1F2; 
+        }
+
+        .barmid a span:hover{
+            
+           color:  #1DA1F2;
+        }
+
+        
+        .barmidT{
+            font-size :18px;
+        }
+
+
+
+        
+        .barright{
+            height: 60px;
+            width: 20%;
+            line-height: 60px;
+            display: inline-block;
+            
+        }
+        .followbox{
+            border: solid 1px #1DA1F2;
+            color: #1DA1F2;
+            text-align: center;
+            height: 35px;
+            width: 50%;
+            float: right;
+            margin: 5%;
+            border-radius: 25px;
+            line-height: 33px;
+            font-weight: 700;
+             
+        }
+
+        .followbox:hover{
+            background-color: #E8F5FD;
+        }
+
+
+        /* 讓NAVBAR丁選在上面時，還會露出一點點BANNER */
+        .content{
+            margin: 0px;
+            box-sizing: border-box;
+            overflow: hidden;
+            height: 500px;
+            position: sticky;
+            top: -388px;
+        }
+
+        .picbox{
+            background-color: red;
+            height: 220px;
+            width: 220px;
+            margin-top: -130px;
+            background-image: url(girl.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 70%;
+            border: solid 5px white;
+        }
+       
+       .barmid a span{
+        font-size :18px;
+       }
+       .imfo{
+        max-width: 1140px;
+        margin: 0 auto;
+       }
+       
+       .main .imfo .left{
+           width: 27%;
+           height: 200px;
+           padding-top: 50px;
+           float: left;
+       }
+       .main .imfo .left img{
+           width: 15px;
+           height: 15px;
+           margin-left: 5px;
+       }
+       .main .imfo .left a{
+            font-size: 20px;
+            color:black;
+            font-family: 'Noto Sans TC', sans-serif;
+       }
+
+        .main .imfo .left a b:hover{
+            
+            text-decoration:underline;
+       }
+
+       
+       
+       .main .imfo .left a span{
+            font-size: 10px;
+            color:rgb(80, 80, 80);
+            text-decoration: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        
+       }
+       /* 推文，推文與回覆，媒體 區塊*/
+       .main .imfo .mid{
+           float: left;
+           width: 50%;
+           height: 1200px;
+           margin-top: 15px;
+           margin-right: 15px;
+           font-size: 19px;
+           background-color: #E6ECF0;
+       }
+       .main .imfo .mid .bar2{
+           width: 100%;
+           height: 40px;
+           line-height: 40px;
+           background-color: #fff;
+       }
+       .main .imfo .mid span{
+            margin-left: 15px;
+           margin-right:25px;
+            font-weight: 800;
+       }
+       .main .imfo .mid a{
+           color: #1DA1F2;
+           margin-right:25px;
+            font-weight: 800;
+       }
+       .main .imfo .mid a:hover{
+           text-decoration: underline;
+       }
+
+       .main .imfo .right{
+           float: right;
+           width: 21%;
+           height: 500px;
+           margin-top: 15px;
+           padding-top: 50px;
+           background-color: #fff;
+       }
+     
+       #mypic{
+            font-size:15px;
+            color:#1DA1F2;
+            text-decoration: none;
+            font-family: 'Noto Sans TC', sans-serif;
+    
+       }
+       
+       #mypic:hover{
+            text-decoration:underline;
+       }
+      
+      .ps1{
+            background-color: #fff;
+            margin-top: 2px;
+            padding: 10px 10px;
+            height: 300px;
+
+      }
+      .picbox2{
+            background-color: red;
+            height: 65px;
+            width: 65px;
+            background-image: url(girl.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 70%;
+            float: left;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="leftbox">
+
+                <a class="navlink" href="#">
+                    <i class="fab fa-twitter "></i>
+                    首頁</a>
+                <a class="navlink" href="#">關於</a>
+            </div>
+            <div class="rightbox">
+                <input type="text" placeholder="  搜尋 Tiwwter" class="searchbox">
+                <span style="font-size: 13px; color:rgb(102,127,117) ;">已經擁有帳戶? &nbsp <b>登入▼</b> </span>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="banner"></div>
+    </div>
+    <div class="selectbar">
+        <div class="container">
+            <div class="barleft">
+                <div class="picbox"></div>
+            </div>
+            <div class="barmid">
+                <a href="#">推文<br>
+                    <span>599</span>
+                </a>
+                <a href="#">正在跟隨<br>
+                    <span>100</span>
+                </a>
+                <a href="#">跟隨者<br>
+                    <span>9999萬</span>
+                </a>
+                <a href="#">喜歡的內容<br>
+                    <span>788</span>
+                </a>
+            </div>
+            <div class="barright">
+                <div class="followbox">跟隨</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="main">
+        <div class="imfo">
+            <div class="left">
+                <a href="#"><b>白皙小姐姐</b><img src="checked.png" alt=""><br>
+                    <span>@Pretty girl</span>
+                </a>
+                <br>
+                <br>
+                <span><img src="calendar.png" alt="">&nbsp 1223年13月加入</span>
+                <br>
+                <br>
+                <a id="mypic" href="#"><img src="picture.png" alt="">&nbsp 100個相片或影片</a>
+                <!-- &nbsp插入空白 -->
+
+            </div>
+            <div class="mid">
+                <div class="bar2">
+                    <span>推文</span>
+                    <a href="#">推文與回覆</a>
+                    <a href="#">媒體</a>
+                </div>
+                <div class="ps1">
+                    <div class="picbox2"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+
+
+
+                </div>
+
+            </div>
+            <div class="right"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
