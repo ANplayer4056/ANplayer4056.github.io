@@ -1,0 +1,263 @@
+
+*{
+    box-sizing: border-box;
+     margin: 0;
+}
+
+
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+
+#clearfix{
+    clear: both;
+}
+
+
+
+/* navBar */
+#navbar{
+    width: 300px;
+    height: 100vh;
+    background-color: antiquewhite;
+    /* box-shadow:1px 1px 3px 3px #333; */
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#logo{
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    margin: 10% auto;
+    background-image: url("IMG/140502_muji_logo.jpg");
+    background-size: cover;
+    background-position: 0 0;
+}
+
+#bergurbar{
+    width: 25px;
+    height: 25px;
+    margin: 15px 10px;
+    background-image: url("IMG/menu.png");
+    background-size: cover;
+    background-position: 0 0;
+    display: none;
+}
+
+.web_a{
+    display: block;
+    text-decoration: none;
+    line-height: 35px;
+    font-weight: 900;
+    color: rgb(128,0,25);
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+
+}
+.web_a:hover{
+    color: rgb(85, 0, 17);
+    margin-left: 20px;
+    border-left: 5px solid rgb(128,0,25);
+}
+.web_a:active{
+    font-size: 18px;
+}
+.web_a:visited{
+    color: rgb(170, 97, 2);
+}
+
+
+
+/* main information - right site */
+#main{
+    width: calc( 100% - 300px);
+    height: 100vh;
+    background-color: white;
+    background-image: url("IMG/hypnotize.png");
+    background-size: contain;
+    background-position: 0 0;
+    margin-left: auto;
+    position: relative;
+
+}
+
+/* product */
+
+.product{
+    width: 80%;
+    height: 70%;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+#section1{
+    width: 33.33%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    float: left;
+    background-image: url("IMG/T-shirt.jpg");
+    background-size: cover;
+    background-position: 0px 0px;
+    
+    
+}
+
+#section1:hover{
+    transform: scale(1.1);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#section2{
+    width: 33.33%;
+    height: 100%;
+    background-color:rgb(255, 255, 255);
+    float: left;
+    background-image: url("IMG/pen.jpg");
+    background-size: cover;
+    background-position: 0px 0px;
+    
+}
+#section2:hover{
+    transform: scale(1.1);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#section3{
+    width: 33.33%;
+    height: 100%;
+    background-color: rgb(247, 242, 235);
+    float: left;
+    background-image: url("IMG/food.jpg");
+    background-size: cover;
+    background-position: 0px 0px;
+    
+}
+#section3:hover{
+    transform: scale(1.1);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
+/* RWD_SmallPC */
+@media(max-width :1280px){
+
+    
+
+    #section1{
+        width: 100%;
+        height: 50%;
+    }
+    
+    #section2{
+        width: 50%;
+        height: 50%;
+    }
+    
+    #section3{
+        width: 50%;
+        height: 50%;
+    }   
+
+
+}
+
+
+/* RWD_pad */
+@media(max-width :768px){
+    #navbar {
+        width: 100%;
+        height: 10vh;
+        z-index: 999;
+       
+    }
+    #main {
+        width: 100%;
+        margin-left:0px;
+        margin-right: 0px;
+        padding-top: 10vh;
+    }
+
+    #logo {
+        height: 60px;
+        width: 60px;
+        margin: 0;
+        position: fixed;
+        top: 1vh;
+        left: 50px;
+        
+    }
+    .web_a{
+            
+        float: right;
+        margin: 5% 1.5%;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .product{
+    width: 90%;
+    height: 70%;
+   
+
+    
+}
+
+   
+   
+}
+
+/* RWD_phone */
+@media(max-width :375px){
+    #section1{
+        width: 100%;
+        height: 33.33%;
+    }
+    
+    #section2{
+        width:100%;
+        height: 33.33%;
+    }
+    
+    #section3{
+        width: 100%;
+        height: 33.33%;
+    }   
+
+    .product{
+
+        width: 100%;
+        height: 90vh ;
+        top: 0;
+        transform: translate(-50%,0); 
+        margin-top: 10vh;
+        
+        
+    }
+    #logo {
+        height: 45px;
+        width: 45px;
+        left: calc(50vw - 20px);
+
+    }
+    .web_a{
+            
+        display: none;
+    }
+    #bergurbar{
+        display: block;
+    }
+    
+
+}
+
+
+
