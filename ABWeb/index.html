@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- googlefont -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Courgette|Pacifico" rel="stylesheet">
@@ -31,166 +31,193 @@
         .lodingvideo {}
 
         /* NAVbar /section1------------------------------------------------- */
-        #logobox{
+        #logobox {
             height: 140px;
             width: 140px;
-            margin:3% 0;
+            margin: 3% 0;
         }
-        #logobox img{
+
+        #logobox img {
             height: 100%;
             width: 100%;
         }
-        #navbarSupportedContent{
-           
+
+        #navbarSupportedContent {
+
             text-align: center;
         }
 
         /* navitems 顏色校正區------------------------------- */
-        .navbar-light .navbar-nav .nav-link { 
+        .navbar-light .navbar-nav .nav-link {
             color: #D44754;
             font-weight: 800;
         }
+
         .navbar-light .navbar-nav .nav-link:hover {
-            color: rgba(212,71,84,.7);
+            color: rgba(212, 71, 84, .7);
         }
+
         /* navitems 顏色校正區------------------------------- */
 
-        .navbar-brand{
+        .navbar-brand {
             padding-left: 30px;
 
         }
-        .navbar-brand span:first-child{
-           font-size: 42px;
-           color: #4E6F8E;
+
+        .navbar-brand span:first-child {
+            font-size: 42px;
+            color: #4E6F8E;
         }
-        .navbar-brand span:last-child{
-           font-size: 21px;
-           color: #4E6F8E;
+
+        .navbar-brand span:last-child {
+            font-size: 21px;
+            color: #4E6F8E;
         }
-        .nav-link{
+
+        .nav-link {
             font-size: 19px;
         }
-           /* navitems間距 */                       
-         @media (min-width: 992px){
+
+        /* navitems間距 */
+        @media (min-width: 992px) {
             .navbar-expand-lg .navbar-nav .nav-link {
-            padding-right: 20px;
-            padding-left: 20px;
+                padding-right: 20px;
+                padding-left: 20px;
             }
         }
 
         /* section2  裝飾線   --------------------------------------------- */
-        #section2{
+        #section2 {
             width: 100%;
             height: 40px;
             background-image: url("IMG/decoLine.jpg");
             background-size: auto 117px;
 
         }
+
         /* sectoin3  banner  ---------------------------------------------*/
-        #bannerBox{
+        #bannerBox {
             width: 100%;
             height: 510px;
             background-image: url("IMG/banner/cake1.jpg");
             background-size: 1450px 967px;
             background-repeat: no-repeat;
             background-position: 0 10%;
-            border-radius:10px;
+            border-radius: 10px;
             margin-top: 102px;
         }
 
-         /* sectoin4  clip-path  不規則色塊--------------------------------*/
-        #section4{
+        /* sectoin4 section6 整合外框position*/
+        .pic_block {
+            position: relative;
+        }
+
+        /* sectoin4  clip-path  不規則色塊--------------------------------*/
+        #section4 {
             width: 100%;
             height: 1240px;
             background-color: #F7DFE3;
             -webkit-clip-path: polygon(0% 0%, 100% 38%, 100% 83%, 0% 100%);
             clip-path: polygon(0% 0%, 100% 38%, 100% 83%, 0% 100%);
             position: absolute;
-            top: 830px;
+            top: -57px;
             left: 0;
             z-index: -1;
-            
+
         }
 
-         /* sectoin5  NEWS--------------------------------*/
-        #section5{
-            margin-top: 75px ;
+        /* 切角圖片----------------------------------------------------------------- */
+        .section6 {
+            width: 100%;
+            height: 67vh;
+            background-image: url('IMG/01.jpg');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            left: 0;
+            top: 900px;
+            z-index: -5;
         }
 
-        #newsTitle{
-            width: 400px; 
+        /* sectoin5  NEWS--------------------------------*/
+        #section5 {
+            margin-top: 75px;
+        }
+
+        #newsTitle {
+            width: 400px;
             background-color: #fff;
             display: inline-block;
             padding: 10px;
-            border-radius:10px;
-            
+            border-radius: 10px;
+
         }
 
-        .titleBox{
+        .titleBox {
             background-color: #fff;
-            border: 10px solid  #D44754;
-            border-radius:10px;
+            border: 10px solid #D44754;
+            border-radius: 10px;
             color: #D44754;
             text-align: center;
             padding: 10px;
         }
-        .titleBox span:first-child{
+
+        .titleBox span:first-child {
             font-size: 36px;
             font-weight: 700;
             line-height: 50px;
         }
-    
+
 
 
         .swiper-container {
             padding: 50px;
         }
+
         .swiper-slide {
             background-position: center;
             background-size: cover;
             width: 300px;
             height: 300px;
         }
-        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+
+        .swiper-button-next,
+        .swiper-container-rtl .swiper-button-prev {
             right: 30%;
         }
-        .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+
+        .swiper-button-prev,
+        .swiper-container-rtl .swiper-button-next {
             left: 30%;
         }
 
-        .section6{
-            width: 100%;
-            height: 73%;
-            background-image: url('IMG/01.jpg');
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-            left: 0;
-            top: 195%;
-            z-index: -5;
-        }
+
+
 
         /* 產品--------------------------------------------------------------------- */
-        .section7{
+        .section7 {
             margin-top: 1000px;
             width: 100%;
             position: relative;
             /* height:825px; */
         }
-        .col-6{
+
+        .col-6 {
             margin-top: 70px;
         }
-        #cake{
+
+        #cake {
             width: 100%;
-            height:90vh;
+            height: 90vh;
             background-image: url("IMG/product/cake02.png");
             background-position: center;
             background-size: cover;
             border: 10px solid white;
         }
-        #drink{
+
+        #drink {
             width: 100%;
-            height:90vh;
+            height: 90vh;
             background-image: url("IMG/product/drink02.png");
             background-position: center;
             background-size: cover;
@@ -198,60 +225,59 @@
 
         }
 
-        .pdtitleBox{ 
+        .pdtitleBox {
             background-color: #fff;
-            border: 10px solid  #4E6F8E;
-            border-radius:7px;
+            border: 10px solid #4E6F8E;
+            border-radius: 7px;
             color: #4E6F8E;
             text-align: center;
             padding: 40px 130px;
             position: absolute;
             z-index: 2;
-            top:50%;
+            top: 50%;
             left: 50%;
-            transform: translate(-50% , 0%);
+            transform: translate(-50%, 0%);
         }
-        /* #productTitle{
-            width: 400px; 
-            background-color: #fff;
-            display: inline-block;
-            padding: 4px;
-            border-radius:7px;
-        } */
-        
-        .pdtitleBox span:first-child{
+
+
+
+        .pdtitleBox span:first-child {
             font-size: 52px;
             font-weight: 500;
-            
+
         }
-        .pdtitleBox span:last-child{
+
+        .pdtitleBox span:last-child {
             line-height: 22px;
             letter-spacing: 3px;
         }
 
         /* -有故事的甜點店------------------------------------------------- */
 
-        .section8{
+        .section8 {
             margin-top: 70px;
         }
-        .section8 .title{
+
+        .section8 .title {
             color: #D44754;
             font-size: 42px;
             font-weight: 700;
         }
-        .section8 .storyBox .col p{
+
+        .section8 .storyBox .col p {
             color: #DB1B1F;
             font-size: 54px;
             font-family: 'Courgette', cursive;
             transform: translateX(85px);
         }
-        .section8 .storyBox{
+
+        .section8 .storyBox {
             margin-top: 63px;
         }
-        
-        .picBox{
+
+        .picBox {
             width: 118%;
-            height:51vh;
+            height: 51vh;
             transform: translateX(-28px);
             background-image: url('IMG/story/Group191.png');
             background-size: cover;
@@ -260,18 +286,20 @@
         }
 
         /* ---------------------------------------------------------------- */
-        .section8 .storyBox .row:nth-child(2){
+        .section8 .storyBox .row:nth-child(2) {
             margin-top: 128px;
             transform: translateX(-60px);
         }
-        .section8 .storyBox .row:nth-child(2) p:first-child{
+
+        .section8 .storyBox .row:nth-child(2) p:first-child {
             font-size: 36px;
             font-family: 'Noto Sans TC', sans-serif;
             text-align: center;
             color: black;
             line-height: 48px;
         }
-        .section8 .storyBox .row:nth-child(2) p:last-child{
+
+        .section8 .storyBox .row:nth-child(2) p:last-child {
             font-size: 20px;
             font-family: 'Noto Sans TC', sans-serif;
             text-align: center;
@@ -283,10 +311,11 @@
 
         /* ---------------------------------------------------------------- */
 
-        .section8 .storyBox .row:last-child{
+        .section8 .storyBox .row:last-child {
             margin-top: 128px;
         }
-        .section8 .storyBox .row:last-child p:first-child{
+
+        .section8 .storyBox .row:last-child p:first-child {
             font-size: 36px;
             font-family: 'Noto Sans TC', sans-serif;
             text-align: center;
@@ -294,7 +323,8 @@
             line-height: 27px;
             transform: translateX(-45px);
         }
-        .section8 .storyBox .row:last-child p:last-child{
+
+        .section8 .storyBox .row:last-child p:last-child {
             font-size: 20px;
             font-family: 'Noto Sans TC', sans-serif;
             text-align: center;
@@ -302,7 +332,8 @@
             line-height: 48px;
             transform: translateX(-45px);
         }
-        .section8 .storyBox .row:last-child .picBox{
+
+        .section8 .storyBox .row:last-child .picBox {
             transform: translateX(-95px);
             background-image: url('IMG/story/Group139.png');
         }
@@ -326,8 +357,9 @@
                 <a class="navbar-brand" href="#"><span>Atelier Baulois</span>
                     <br><span>A B 法國人的甜點店</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -371,7 +403,13 @@
 
 
 
-    <div id="section4"></div>
+    <div class="pic_block">
+        <!-- 斜角色塊 -->
+        <div id="section4"></div>
+        <!-- section6 裝飾圖 切角-->
+        <div class="section6"></div>
+    </div>
+
 
     <div id="section5">
         <div class="container">
@@ -401,10 +439,10 @@
         <!-- Add Arrows -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
+
     </div>
 
-    <!-- section6 裝飾圖 切角-->
-    <div class="section6"></div>
+
 
     <!-- 產品 -->
     <div class="section7">
@@ -476,11 +514,14 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
