@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
 
 
+
+
     <title>Atelier Baulois</title>
     <link rel="icon" type="image/png" href="IMG/LOGO.png" />
 
@@ -172,6 +174,7 @@
 
         .swiper-container {
             padding: 50px;
+            top: 170px;
         }
 
         .swiper-slide {
@@ -337,6 +340,284 @@
             transform: translateX(-95px);
             background-image: url('IMG/story/Group139.png');
         }
+
+
+        /* timeline------------------------------------------- */
+        .Timeline {
+            width: 100%;
+            margin: 0;
+            margin-top: 100px;
+            font-family: "Droid Sans", sans-serif;
+        }
+
+        .main-timeline {
+            font-family: 'Roboto', sans-serif;
+            padding: 20px 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .main-timeline .timeline {
+            background-color: #fff;
+            padding: 20px 70px 20px 20px;
+            border-radius: 0 100px 100px 0;
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+
+        .main-timeline .timeline:before {
+            content: '';
+            background-color: #fff;
+            height: 240px;
+            width: 240px;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+
+        .main-timeline .timeline-content {
+            color: #000;
+            text-align: right;
+            width: 95%;
+            min-height: 160px;
+            padding: 30px 170px 30px 180px;
+            border: 2px solid #FD8881;
+            display: block;
+            float: left;
+            position: relative;
+        }
+
+        .main-timeline .timeline-content:hover {
+            text-decoration: none;
+        }
+
+
+        .main-timeline .title {
+            color: #D2292B;
+            text-transform: capitalize;
+            font-size: 25px;
+            font-weight: 600;
+            margin: 0 0 5px;
+        }
+
+        .main-timeline .description {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .main-timeline .timeline-year {
+            color: #fff;
+            background: linear-gradient(60deg, #FF9389, #D44754);
+            font-size: 70px;
+            font-weight: 600;
+            text-align: center;
+            text-shadow: 2px 2px 5px #000;
+            line-height: 200px;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            transform: translateY(-50%);
+            position: absolute;
+            right: -95px;
+            top: 50%;
+        }
+
+        .main-timeline .timeline-year:before,
+        .main-timeline .timeline-year:after {
+            content: '';
+            height: 190px;
+            width: 190px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: 85px;
+            top: 135px;
+        }
+
+        .main-timeline .timeline-year:after {
+            border-radius: 0;
+            transform: rotate(58deg);
+            top: 144px;
+            left: 116px;
+            box-shadow: 0 0 8px #000;
+        }
+
+        .main-timeline .timeline:nth-child(even) {
+            border-radius: 100px 0 0 100px;
+            padding: 20px 20px 20px 70px;
+        }
+
+        .main-timeline .timeline:nth-child(even) .timeline-icon {
+            left: auto;
+            right: 13px;
+        }
+
+        .main-timeline .timeline:nth-child(even) .timeline-content {
+            padding: 20px 180px 20px 170px;
+            text-align: left;
+            float: right;
+        }
+
+        .main-timeline .timeline:nth-child(even):before {
+            right: auto;
+            left: 0;
+        }
+
+        .main-timeline .timeline:nth-child(even) .timeline-year {
+            right: auto;
+            left: -95px;
+        }
+
+        .main-timeline .timeline:nth-child(4n+2) .timeline-content {
+            border-color: #D44754;
+        }
+
+        .main-timeline .timeline:nth-child(4n+2) .timeline-year {
+            background: linear-gradient(60deg, #FF9389, #D44754);
+        }
+
+        
+
+        .main-timeline .timeline:nth-child(4n+3) .timeline-year {
+            background: linear-gradient(60deg, #FF9389, #D44754);
+        }
+
+        .main-timeline .timeline:nth-child(4n+4) .timeline-content {
+            border-color: #D44754;
+        }
+
+        .main-timeline .timeline:nth-child(4n+4) .timeline-year {
+            background: linear-gradient(60deg, #FF9389, #D44754);
+        }
+
+        @media screen and (max-width:1200px) {
+            .main-timeline {
+                padding: 20px 0 0;
+            }
+        }
+
+        @media screen and (max-width:990px) {
+            .main-timeline {
+                padding: 20px 0 0 0;
+            }
+
+            .main-timeline .timeline:nth-child(even),
+            .main-timeline .timeline {
+                border-radius: 0;
+                padding: 20px;
+                margin: 0 100px 60px 0;
+            }
+
+            .main-timeline .timeline:nth-child(even) {
+                margin: 0 0 60px 100px;
+            }
+
+            .main-timeline .timeline:nth-child(even) .timeline-content,
+            .main-timeline .timeline-content {
+                padding: 20px 120px 20px 190px;
+            }
+
+            .main-timeline .timeline:nth-child(even) .timeline-content {
+                padding: 20px 190px 20px 120px;
+            }
+
+            .main-timeline .timeline:before {
+                right: -100px;
+            }
+
+            .main-timeline .timeline-year {
+                right: -130px;
+            }
+
+            .main-timeline .timeline:nth-child(even):before {
+                left: -100px;
+            }
+
+            .main-timeline .timeline:nth-child(even) .timeline-year {
+                left: -130px;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .main-timeline {
+                padding: 70px 0 0;
+            }
+
+            .main-timeline .timeline:nth-child(even),
+            .main-timeline .timeline {
+                border-radius: 0;
+                padding: 15px;
+                margin: 0 0 100px;
+            }
+
+            .main-timeline .timeline:nth-child(even) .timeline-content,
+            .main-timeline .timeline-content {
+                padding: 100px 30px 20px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .main-timeline .timeline-icon {
+                display: none;
+            }
+
+            .main-timeline .timeline:nth-child(even):before,
+            .main-timeline .timeline:before {
+                display: block;
+                right: 50%;
+                top: -70px;
+                transform: translateY(0) translateX(50%);
+                height: 180px;
+                width: 180px;
+            }
+
+            .main-timeline .timeline:nth-child(even):before {
+                left: 50%;
+                transform: translateY(0) translateX(-50%);
+            }
+
+            .main-timeline .timeline:nth-child(even) .timeline-year,
+            .main-timeline .timeline-year {
+                right: 50%;
+                top: -70px;
+                transform: translateY(0) translateX(50%);
+                height: 150px;
+                width: 150px;
+                line-height: 150px;
+                font-size: 50px;
+            }
+
+            .main-timeline .timeline-year:before {
+                left: 30px;
+                top: 100px;
+            }
+
+            .main-timeline .timeline-year:after {
+                left: 65px;
+                top: 106px;
+                transform: rotate(67deg);
+            }
+
+            .main-timeline .timeline:nth-child(even) .timeline-year {
+                left: 50%;
+                transform: translateY(0) translateX(-50%);
+            }
+        }
+
+        .section9{
+            width: 100%;
+            height: 65vh;
+            background-image: url('IMG/piccake2.png');
+            background-position: center;
+            background-size: cover;
+            opacity: 0.8;
+        }
     </style>
 
 
@@ -433,8 +714,6 @@
             <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/6)"></div>
         </div>
 
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
 
         <!-- Add Arrows -->
         <div class="swiper-button-prev"></div>
@@ -460,6 +739,7 @@
         </div>
     </div>
 
+    <!-- 有故事的甜點 -->
     <div class="section8">
         <div class="container">
             <div class="title">有故事的甜點店</div>
@@ -506,10 +786,116 @@
                         <div class="picBox"></div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+
+    <!-- 時間軸 -->
+    <div class="Timeline">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css /> -->
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-12">
+                                <div class="main-timeline">
+                                        <div class="timeline">
+                                                <a href="#" class="timeline-content">
+                                                        <div class="inner-content">
+                                                                <h3 class="title">2016 / 07 市集販售</h3>
+                                                                <p class="description">
+                                                                        跟隨著市集擺攤，開始販售法式甜點
+                                                                 </p>
+                                                            </div>
+                                                        <div class="timeline-year"><span>2016</span></div>
+                                                    </a>
+                                            </div>
+                                        <div class="timeline">
+                                                <a href="#" class="timeline-content">
+                                 
+                                                        <div class="inner-content">
+                                                                <h3 class="title">2016 / 10 初始名片</h3>
+                                                                <p class="description">
+                                                                    第一張名片誕生，名為 Smell & Kiss Karen's food
+                                                                </p>
+                                                            </div>
+                                                        <div class="timeline-year"><span>2016</span></div>
+                                                    </a>
+                                            </div>
+                                        <div class="timeline">
+                                                <a href="#" class="timeline-content">
+                                                        <div class="inner-content">
+                                                                <h3 class="title">2017 / 02 LOGO改版</h3>
+                                                                <p class="description">
+                                                                       LOGO改版，並更名為 Atelier Baulois
+                                                                </p>
+                                                                <p class="description">
+                                                                       中文則稱作AB法國人的甜點店
+                                                                </p>
+                                                            
+                                        </div>
+                                                        <div class="timeline-year"><span>2017</span></div>
+                                                    </a>
+                                            </div>
+                                        <div class="timeline">
+                                                <a href="#" class="timeline-content">
+                                                       
+                                                        <div class="inner-content">
+                                                                <h3 class="title">2017 / 04 開幕茶會</h3>
+                                                                <p class="description">
+                                                                    擁有自己的店面，舉辦開幕茶會與顧客一同慶祝
+                                                                </p>
+                                                            </div>
+                                                        <div class="timeline-year"><span>2017</span></div>
+                                                    </a>
+                                            </div>
+                                        <div class="timeline">
+                                                <a href="#" class="timeline-content">
+                                                      
+                                                        <div class="inner-content">
+                                                                <h3 class="title">2017 / 10 榮登週排行</h3>
+                                                                <p class="description">
+                                                                    榮登愛食週記週排行榜，第6名
+                                                                </p>
+                                                            </div>
+                                                        <div class="timeline-year"><span>2017</span></div>
+                                                    </a>
+                                        </div>
+                                        <div class="timeline">
+                                                <a href="#" class="timeline-content">
+                                                        
+                                                        <div class="inner-content">
+                                                                <h3 class="title">2017 / 11 熱門關鍵字</h3>
+                                                                <p class="description">
+                                                                      登上Yahoo奇摩首頁熱門搜尋
+                                                                </p>
+                                                            </div>
+                                                        <div class="timeline-year"><span>2017</span></div>
+                                                    </a>
+                                        </div>
+                                        <div class="timeline">
+                                                <a href="#" class="timeline-content">
+                                                       
+                                                        <div class="inner-content">
+                                                                <h3 class="title">2018 / 08 新聞採訪</h3>
+                                                                <p class="description">
+                                                                       年代新聞，採訪店家Atelier Baulois
+                                                                    </p>
+                                                            </div>
+                                                        <div class="timeline-year"><span>2018</span></div>
+                                                    </a>
+                                         </div>                                 
+                                </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+
+    <!-- 引導裝飾圖 -->
+    <div class="section9"></div>
+
+
+
+
 
 
     <!-- Optional JavaScript -->
@@ -539,9 +925,6 @@
             centeredSlides: true,
             // effect: 'flip',
             grabCursor: true,
-            pagination: {
-                el: '.swiper-pagination',
-            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
