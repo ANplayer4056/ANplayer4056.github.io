@@ -183,19 +183,37 @@
 
         .swiper-slide {
             background-position: center;
-            background-size: cover;
-            width: 300px;
-            height: 300px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 30vw;
+            height: 30vh;
+            margin-left: -10px;
         }
 
         .swiper-button-next,
         .swiper-container-rtl .swiper-button-prev {
             right: 30%;
+            background-image: url("IMG/next.png");
         }
 
         .swiper-button-prev,
         .swiper-container-rtl .swiper-button-next {
             left: 30%;
+            background-image: url("IMG/prev.png");
+        }
+
+        .newsInfo {
+            background-color: #D44754;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            border-radius: 10px;
+            letter-spacing: 3px;
+            position: absolute;
+            left: 60%;
+            top: 65%;
+            width: 250px;
+            height: 100px;
         }
 
 
@@ -835,11 +853,31 @@
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/1)"></div>
-            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/2)"></div>
-            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/3)"></div>
-            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/4)"></div>
-            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/5)"></div>
+            <div class="swiper-slide" style="background-image:url('IMG/NEWS/news1.png')">
+                <div class="newsInfo">
+                    <p>聖誕大餐實作課程</p>
+                    <p>義式燉飯 + 提拉米蘇</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url('IMG/NEWS/news2.png')">
+                <div class="newsInfo">
+                    <p>實作課程</p>
+                    <p>草莓塔 + 法式鹹派$2600</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url('IMG/NEWS/news3.png')">
+                <div class="newsInfo">
+                    <p>實作課程</p>
+                    <p>親子手作野餐料理$900</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url('IMG/NEWS/news4.png')">
+                <div class="newsInfo">
+                    <p>新品上市</p>
+                    <p>反烤焦糖蘋果酥派</p>
+                </div>
+            </div>
+
         </div>
 
 
