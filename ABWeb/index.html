@@ -15,6 +15,10 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
 
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 
 
 
@@ -617,12 +621,131 @@
             background-position: center;
             background-size: cover;
             opacity: 0.8;
+            margin-bottom: 100px;
         }
 
         /*環境圖  */
         .section10 {
             width: 100%;
-            height: 120vh;
+            height: 150vh;
+            position: relative;
+            margin-bottom: 100px;
+        }
+
+        .pic01 {
+            width: 27%;
+            height: 70vh;
+            background-image: url('IMG/pic01.png');
+            background-position: center;
+            background-size: cover;
+            border-radius: 15px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-100%, -85%);
+        }
+
+        .pic02 {
+            width: 40%;
+            height: 50vh;
+            background-image: url('IMG/pic02.png');
+            background-position: center;
+            background-size: cover;
+            border-radius: 15px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-100%, 35%);
+
+        }
+
+        .pic03 {
+            width: 28%;
+            height: 70vh;
+            background-image: url('IMG/pic03.png');
+            background-position: center;
+            background-size: cover;
+            border-radius: 15px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(15%, -50%);
+        }
+
+        .color_block {
+            width: 48%;
+            height: 90vh;
+            background-color: #F7DFE3;
+            border-radius: 15px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-40%, -50%);
+            z-index: -5;
+        }
+
+        .section10 .text01 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(30%, 380%);
+        }
+
+        /* footer --------------------------------------------------------- */
+
+        footer .col:first-child {
+            text-align: center;
+            background-color: #F7DFE3;
+            padding: 5% 0;
+            color: #D44754;
+
+        }
+
+        footer .col:first-child .storeCard p:first-child {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        footer .col:first-child .storeCard p:last-child {
+            letter-spacing: 7.3px;
+            line-height: 5px;
+        }
+
+        footer .storeCard {
+            margin-bottom: 10%;
+        }
+
+        footer .row:last-child {
+            justify-content: center;
+            font-size: 10px;
+            background-color: #DA4857;
+            color: white;
+        }
+
+        footer .row:last-child p {
+            margin-top: 1%;
+        }
+
+        footer .col:first-child .storeInfo a {
+            font-size: 18px;
+            letter-spacing: 10px;
+            color: #D44754;
+
+        }
+
+        footer .col:first-child .storeInfo p {
+            font-size: 18px;
+            letter-spacing: 10px;
+
+        }
+
+        footer .col:first-child .storeIcon i {
+            cursor: pointer;
+            color: #D44754;
+            font-size: 26px;
+            letter-spacing: 20px;
+            text-shadow: 2px 2px 4px #c46464;
         }
     </style>
 
@@ -717,7 +840,6 @@
             <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/3)"></div>
             <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/4)"></div>
             <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/5)"></div>
-            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/6)"></div>
         </div>
 
 
@@ -901,10 +1023,57 @@
 
     <!-- 環境照 -->
     <div class="section10">
+        <div class="pic01"></div>
+        <div class="pic02"></div>
+        <div class="pic03"></div>
+        <div class="color_block"></div>
 
-
+        <!-- 裝飾文字 -->
+        <div class="text01">
+            <h1>再忙</h1>
+            <br>
+            <h5>也要跟你甜蜜在這一刻</h5>
+        </div>
     </div>
 
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid"></div>
+
+        <div class="row">
+            <!-- 左方，聯絡資訊 -->
+            <div class="col">
+                <div class="storeCard">
+                    <p>有故事的甜點 Atelier Baulois</p>
+                    <p>法式甜點|外燴茶會|彌月蛋糕|婚禮小物</p>
+                </div>
+
+                <div class="storeInfo">
+                    <a href="tel:1243433">來電:04 2260 5156</a>
+                    <p>店家位置:台中市南區南陽街61號</p>
+                </div>
+
+                <div class="storeIcon">
+                    <a href="https://www.facebook.com/atelierbaulois/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/atelierbaulois/"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:atelierbaulois@gmail.com"><i class="far fa-envelope"></i></a>
+
+
+                </div>
+            </div>
+            <!-- 右方，map -->
+            <div class="col">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1820.6619895646586!2d120.66049340571386!3d24.125257918126103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dab4c5ebccb%3A0x9829944e0c89f4fe!2zQSBCIOazleWci-S6uueahOeUnOm7nuW6lw!5e0!3m2!1szh-TW!2stw!4v1552312874642"
+                    width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- 壓底copyright -->
+        <div class="row">
+            <p>© Copyright 2018. Atelier Baulois All Rights Reserved.</p>
+        </div>
+    </footer>
 
 
 
