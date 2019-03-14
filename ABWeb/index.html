@@ -105,10 +105,10 @@
         #bannerBox {
             width: 100%;
             height: 510px;
-            background-image: url("IMG/banner/cake1.jpg");
-            background-size: 1450px 967px;
+            background-image: url("IMG/banner/cake2.png");
+            background-size: cover;
             background-repeat: no-repeat;
-            background-position: 0 10%;
+            background-position: center;
             border-radius: 10px;
             margin-top: 102px;
         }
@@ -185,10 +185,10 @@
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
-            width: 30vw;
             height: 30vh;
             margin-left: -10px;
         }
+
 
         .swiper-button-next,
         .swiper-container-rtl .swiper-button-prev {
@@ -220,7 +220,7 @@
 
 
         /* 產品--------------------------------------------------------------------- */
-        .section7 {
+        #section7 {
             margin-top: 1000px;
             width: 100%;
             position: relative;
@@ -238,6 +238,12 @@
             background-position: center;
             background-size: cover;
             border: 10px solid white;
+            cursor: pointer;
+        }
+
+        #cake:hover {
+            transform: scale(0.95);
+            transition: all 0.5s ease 0s;
         }
 
         #drink {
@@ -247,7 +253,13 @@
             background-position: center;
             background-size: cover;
             border: 10px solid white;
+            cursor: pointer;
 
+        }
+
+        #drink:hover {
+            transform: scale(0.95);
+            transition: all 0.5s ease 0s;
         }
 
         .pdtitleBox {
@@ -279,24 +291,24 @@
 
         /* -有故事的甜點店------------------------------------------------- */
 
-        .section8 {
+        #section8 {
             margin-top: 70px;
         }
 
-        .section8 .title {
+        #section8 .title {
             color: #D44754;
             font-size: 42px;
             font-weight: 700;
         }
 
-        .section8 .storyBox .col p {
+        #section8 .storyBox .col p {
             color: #DB1B1F;
             font-size: 54px;
             font-family: 'Courgette', cursive;
             transform: translateX(85px);
         }
 
-        .section8 .storyBox {
+        #section8 .storyBox {
             margin-top: 63px;
         }
 
@@ -316,7 +328,7 @@
             transform: translateX(-60px);
         }
 
-        .section8 .storyBox .row:nth-child(2) p:first-child {
+        #section8 .storyBox .row:nth-child(2) p:first-child {
             font-size: 36px;
             font-family: 'Noto Sans TC', sans-serif;
             text-align: center;
@@ -324,7 +336,7 @@
             line-height: 48px;
         }
 
-        .section8 .storyBox .row:nth-child(2) p:last-child {
+        #section8 .storyBox .row:nth-child(2) p:last-child {
             font-size: 20px;
             font-family: 'Noto Sans TC', sans-serif;
             text-align: center;
@@ -336,11 +348,11 @@
 
         /* ---------------------------------------------------------------- */
 
-        .section8 .storyBox .row:last-child {
+        #section8 .storyBox .row:last-child {
             margin-top: 128px;
         }
 
-        .section8 .storyBox .row:last-child p:first-child {
+        #section8 .storyBox .row:last-child p:first-child {
             font-size: 36px;
             font-family: 'Noto Sans TC', sans-serif;
             text-align: center;
@@ -349,7 +361,7 @@
             transform: translateX(-45px);
         }
 
-        .section8 .storyBox .row:last-child p:last-child {
+        #section8 .storyBox .row:last-child p:last-child {
             font-size: 20px;
             font-family: 'Noto Sans TC', sans-serif;
             text-align: center;
@@ -358,7 +370,7 @@
             transform: translateX(-45px);
         }
 
-        .section8 .storyBox .row:last-child .picBox {
+        #section8 .storyBox .row:last-child .picBox {
             transform: translateX(-95px);
             background-image: url('IMG/story/Group139.png');
         }
@@ -542,11 +554,11 @@
 
             .main-timeline .timeline:nth-child(even) .timeline-content,
             .main-timeline .timeline-content {
-                padding: 20px 120px 20px 190px;
+                padding: 20px 120px 20px 150px;
             }
 
             .main-timeline .timeline:nth-child(even) .timeline-content {
-                padding: 20px 190px 20px 120px;
+                padding: 20px 150px 20px 120px;
             }
 
             .main-timeline .timeline:before {
@@ -711,7 +723,7 @@
 
         /* footer --------------------------------------------------------- */
 
-        footer .col:first-child {
+        footer .col-xl-6:first-child {
             text-align: center;
             background-color: #F7DFE3;
             padding: 5% 0;
@@ -719,13 +731,13 @@
 
         }
 
-        footer .col:first-child .storeCard p:first-child {
+        footer .col-xl-6:first-child .storeCard p:first-child {
             font-size: 26px;
             font-weight: 700;
             letter-spacing: 3px;
         }
 
-        footer .col:first-child .storeCard p:last-child {
+        footer .col-xl-6:first-child .storeCard p:last-child {
             letter-spacing: 7.3px;
             line-height: 5px;
         }
@@ -745,25 +757,586 @@
             margin-top: 1%;
         }
 
-        footer .col:first-child .storeInfo a {
+        footer .col-xl-6:first-child .storeInfo a {
             font-size: 18px;
             letter-spacing: 10px;
             color: #D44754;
 
         }
 
-        footer .col:first-child .storeInfo p {
+        footer .col-xl-6:first-child .storeInfo p {
             font-size: 18px;
             letter-spacing: 10px;
 
         }
 
-        footer .col:first-child .storeIcon i {
+        footer .col-xl-6:first-child .storeIcon i {
             cursor: pointer;
             color: #D44754;
             font-size: 26px;
             letter-spacing: 20px;
             text-shadow: 2px 2px 4px #c46464;
+        }
+
+
+
+
+        /*----------------------------------------- RWD setting  ------------------------------------- */
+        /* iPad Pro */
+        @media screen and (max-width: 1024px) {
+            .navbar-brand span:first-child {
+                font-size: 27px;
+            }
+
+            .swiper-slide {
+                width: 50vw !important;
+            }
+
+            .swiper-button-next,
+            .swiper-container-rtl .swiper-button-prev {
+                display: none;
+
+            }
+
+            .swiper-button-prev,
+            .swiper-container-rtl .swiper-button-next {
+                display: none;
+
+            }
+
+            .section6 {
+                height: 38vh;
+                top: 965px;
+            }
+
+            #section7 {
+                margin-top: 740px;
+            }
+
+            #cake {
+                height: 45vh;
+            }
+
+            #drink {
+                height: 45vh;
+            }
+
+            .pdtitleBox {
+                padding: 30px 85px;
+            }
+
+            .picBox {
+                width: 200%;
+                height: 35vh;
+            }
+
+            #section8 .storyBox .col:nth-child(2) p {
+                font-size: 35px;
+                transform: translate(-160px, 360px);
+            }
+
+            #section8 .storyBox .row:nth-child(2) p:first-child {
+                margin-top: 30%;
+                transform: translateX(-30px);
+            }
+
+            #section8 .storyBox .row:nth-child(2) p:last-child {
+                transform: translateX(-20px);
+            }
+
+            #section8 .storyBox .row:last-child .picBox {
+                transform: translateX(-50%);
+            }
+
+            #section8 .storyBox .row:last-child .col:first-child {
+                transform: translate(55%, 140%);
+            }
+
+            .Timeline {
+                margin-top: 35%;
+            }
+
+            .section9 {
+                height: 25vh;
+                margin-top: 10%;
+            }
+
+            .pic01 {
+                width: 40%;
+                height: 41vh;
+                transform: translate(-100%, -135%);
+            }
+
+            .pic03 {
+                width: 40%;
+                height: 41vh;
+                transform: translate(15%, -100%);
+            }
+
+            .pic02 {
+                width: 50%;
+                height: 30vh;
+                transform: translate(-100%, -25%);
+            }
+
+            .color_block {
+                width: 70%;
+                height: 60vh;
+                transform: translate(-40%, -75%);
+            }
+
+            .section10 .text01 {
+                transform: translate(30%, 230%);
+            }
+
+            .section10 {
+                height: 120vh;
+                margin-bottom: -30%;
+            }
+
+            #footer .row .col:first-child {
+                height: 35vh;
+            }
+
+            #footer .row .col:last-child {
+                height: 35vh;
+            }
+
+            footer .col:first-child {
+                padding: 10% 0;
+            }
+
+
+            /* iPad  */
+            @media screen and (max-width: 768px) {
+                #bannerBox {
+                    height: 40vh;
+                }
+
+                .pdtitleBox span:first-child {
+                    font-size: 35px;
+                }
+
+                .pdtitleBox span:last-child {
+                    letter-spacing: 0px;
+                }
+
+                .pdtitleBox {
+                    padding: 20px 65px;
+                }
+
+                #section8 .storyBox .row:nth-child(2) p:first-child {
+                    margin-top: 50%;
+                }
+
+                .Timeline {
+                    margin-top: 70%;
+                }
+
+                .pic01 {
+                    width: 36%;
+                    height: 35vh;
+                    transform: translate(-100%, -154%);
+                }
+
+                .pic03 {
+                    width: 36%;
+                    height: 35vh;
+                    transform: translate(15%, -120%);
+                }
+
+                .pic02 {
+                    width: 45%;
+                    height: 25vh;
+                    transform: translate(-100%, -60%);
+                }
+
+                .color_block {
+                    width: 60%;
+                    height: 50vh;
+                    transform: translate(-45%, -95%);
+                }
+
+                .section10 .text01 {
+                    transform: translate(30%, 40%);
+                }
+
+                .section10 {
+                    height: 110vh;
+                    margin-bottom: -40%;
+                }
+
+            }
+
+
+            /* iPone plus */
+            @media screen and (max-width:415px) {
+                #logobox img {
+                    height: 80%;
+                    width: 80%;
+                    margin: 10% 110%;
+                }
+
+                .navbar-light .navbar-brand {
+                    display: none;
+                }
+
+                .navbar-light .navbar-nav .nav-link {
+                    margin-left: 10%;
+                }
+
+                #section2 {
+                    margin-left: 5%;
+                }
+
+                #bannerBox {
+                    height: 35vh;
+                    margin-left: 15%;
+                    width: 85%;
+                }
+
+                .titleBox span:first-child {
+                    font-size: 30px;
+                }
+
+                #newsTitle {
+                    width: 85%;
+                    padding: 10px;
+                    margin-left: 16%;
+                }
+
+                .swiper-slide {
+                    width: 80vw !important;
+                }
+
+                .newsInfo {
+                    left: 13%;
+                    top: 73%;
+                }
+
+                #section4 {
+                    height: 135vh;
+                }
+
+                #section4 {
+                    clip-path: polygon(-45% 0%, 100% 25%, 100% 80%, 0% 90%);
+                }
+
+                .section6 {
+                    height: 28vh;
+                    top: 735px;
+                }
+
+                #section7 {
+                    margin-top: 85%;
+                    margin-left: 5%;
+                }
+
+                #drink {
+                    height: 35vh;
+                }
+
+                #cake {
+                    height: 35vh;
+                }
+
+                .pdtitleBox {
+                    padding: 12px 20px;
+                    border: 5px solid #4E6F8E;
+                }
+
+                .pdtitleBox span:first-child {
+                    font-size: 20px;
+                }
+
+                .pdtitleBox span:last-child {
+                    font-size: 12px;
+                }
+
+                #section8 .title {
+                    font-size: 26px;
+                    margin-left: 10%;
+                }
+
+                .pic_block {
+                    margin-right: -5%;
+                }
+
+                .picBox {
+                    margin-left: 40%;
+                    transform: translateX(-35px);
+                }
+
+                #section8 .storyBox .col:nth-child(2) p {
+                    font-size: 20px;
+                    transform: translate(-70px, 220px);
+                }
+
+                #section8 .storyBox .row:nth-child(2) p:first-child {
+                    font-size: 28px;
+                    margin-left: 25%;
+                }
+
+                #section8 .storyBox .row:nth-child(2) p:last-child {
+                    transform: translateX(34px);
+                    font-size: 14px;
+                }
+
+                #section8 .storyBox .row:last-child {
+                    margin-top: 0px;
+                }
+
+                #section8 .storyBox .row:last-child .picBox {
+                    transform: translate(-68%, 0%);
+                }
+
+                #section8 .storyBox .row:last-child .col:first-child {
+                    transform: translate(90%, 60%);
+                }
+
+                #section8 .storyBox .row:last-child p:first-child {
+                    font-size: 26px;
+                }
+
+                #section8 .storyBox .row:last-child p:last-child {
+                    font-size: 16px;
+                    transform: translateX(-150px);
+                    width: 200%;
+                }
+
+                #section8 .storyBox .row:last-child .col:first-child {
+                    transform: translate(95%, 110%);
+                }
+
+                .section9 {
+                    margin-top: -10%;
+                    margin-left: 5%;
+                }
+
+                .Timeline {
+                    margin-left: 5%;
+                }
+
+                .color_block {
+                    width: 60%;
+                    height: 40vh;
+                    transform: translate(-35%, -120%);
+                }
+
+                .pic01 {
+                    height: 30vh;
+                    transform: translate(-80%, -185%);
+                }
+
+                .pic03 {
+                    height: 30vh;
+                    transform: translate(40%, -150%);
+                }
+
+                .pic02 {
+                    width: 48%;
+                    height: 20vh;
+                    transform: translate(-85%, -110%);
+                }
+
+                .section10 .text01 {
+                    transform: translate(-35%, 40%);
+                }
+
+                #footer .row .col-md-12:nth-child(2) {
+                    padding-right: 0px;
+                    height: 45vh;
+                }
+
+                footer .col-xl-6:first-child .storeCard p:last-child {
+                    letter-spacing: 2.1px;
+                }
+
+                footer .col-xl-6:first-child .storeCard p:first-child {
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                }
+
+                footer .storeCard {
+                    margin-left: 9%;
+                }
+
+                footer .col-xl-6:first-child .storeInfo p {
+                    font-size: 16px;
+                    letter-spacing: 3.8px;
+                }
+
+                footer .storeInfo {
+                    margin-left: 9%;
+                }
+
+                footer .storeIcon {
+                    margin-left: 20%;
+                }
+
+                footer .row:last-child p {
+                    margin-top: 2.5%;
+                    margin-left: 10%;
+                }
+            }
+
+            /* 手機板微調 */
+            @media screen and (max-width:412px) {
+                #logobox img {
+                    margin: 10% 100%;
+                }
+
+                .navbar-light .navbar-nav .nav-link {
+                    margin-left: 3%;
+                }
+
+                #section2 {
+                    margin-left: unset;
+                }
+
+                #bannerBox {
+                    margin-left: 5%;
+                    width: 90%;
+                }
+
+                #newsTitle {
+                    margin-left: 8%;
+                }
+
+                .section6 {
+                    height: 26vh;
+                    top: 836px;
+                }
+
+                #section7 {
+                    margin-top: 110%;
+                    margin-left: 0%;
+                }
+
+                .picBox {
+                    margin-left: unset;
+                    transform: translateX(15px);
+                }
+
+                #section8 .storyBox .col:nth-child(2) p {
+                    font-size: 18px;
+                }
+
+                #section8 .storyBox .row:nth-child(2) p:first-child {
+                    margin-left: 15%;
+                }
+
+                #section8 .storyBox .row:nth-child(2) p:last-child {
+                    transform: translateX(5px);
+                }
+
+                #section8 .storyBox .row:last-child .picBox {
+                    transform: translate(-55%, 0%);
+                }
+
+                #section8 .storyBox .row:last-child .col:first-child {
+                    transform: translate(80%, 110%);
+                }
+
+                #section8 .storyBox .row:last-child p:last-child {
+                    font-size: 14px;
+                }
+
+                .Timeline {
+                    margin-left: unset;
+                }
+
+                .section9 {
+                    margin-top: -10%;
+                    margin-left: unset;
+                }
+
+                .section10 {
+                    margin-left: -6%;
+                }
+
+                .text01 h1 {
+                    font-size: 26px;
+                }
+
+                .text01 h5 {
+                    font-size: 16px;
+                }
+
+                footer .storeCard {
+                    margin-left: unset;
+                }
+
+                footer .storeInfo {
+                    margin-left: unset;
+                }
+
+                footer .storeIcon {
+                    margin-left: 10%;
+                }
+
+                #footer .row .col-md-12:nth-child(2) {
+                    height: 40vh;
+                }
+
+                footer .row:last-child p {
+                    margin-left: unset;
+                }
+
+            }
+
+            /* iPhone */
+            @media screen and (max-width:376px) {
+                #logobox img {
+                    margin: 10% 85%;
+                }
+
+                #section2 {
+                    width: 110%;
+                }
+
+                #bannerBox {
+                    margin-left: 8%;
+                }
+
+                .swiper-container {
+                    top: 80px;
+                }
+
+                .section6 {
+                    height: 30vh;
+                    top: 660px;
+                }
+
+                #section7 {
+                    margin-top: 80%;
+                    margin-left: 2%;
+                }
+
+                #section8 .storyBox .col:nth-child(2) p {
+                    width: 125%;
+                    transform: translate(-80px, 220px);
+                }
+
+                #section8 .storyBox .row:last-child .col:first-child {
+                    transform: translate(90%, 110%);
+                }
+
+                #section8 .storyBox .row:last-child p:first-child {
+                    margin-left: -30%;
+                }
+
+                .section9 {
+                    width: 110%;
+                }
+
+                .section10 {
+                    margin-left: -3%;
+                }
+            }
+
+
+
         }
     </style>
 
@@ -798,16 +1371,16 @@
                     <ul class="navbar-nav ml-auto ">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">最新消息</a>
+                            <a class="nav-link" href="#section5">最新消息</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">甜點時刻</a>
+                            <a class="nav-link" href="#section7">甜點時刻</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">有故事的甜點</a>
+                            <a class="nav-link" href="#section8">有故事的甜點</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">聯絡我們</a>
+                            <a class="nav-link" href="#footer">聯絡我們</a>
                         </li>
                     </ul>
                 </div>
@@ -890,7 +1463,7 @@
 
 
     <!-- 產品 -->
-    <div class="section7">
+    <div id="section7">
         <div class="container-fluid">
             <div id="productTitle">
                 <div class="pdtitleBox">
@@ -906,7 +1479,7 @@
     </div>
 
     <!-- 有故事的甜點 -->
-    <div class="section8">
+    <div id="section8">
         <div class="container">
             <div class="title">有故事的甜點店</div>
             <div class="storyBox">
@@ -1075,12 +1648,12 @@
     </div>
 
     <!-- footer -->
-    <footer>
+    <footer id="footer">
         <div class="container-fluid"></div>
 
         <div class="row">
             <!-- 左方，聯絡資訊 -->
-            <div class="col">
+            <div class="col-xl-6 col-md-12 order-1">
                 <div class="storeCard">
                     <p>有故事的甜點 Atelier Baulois</p>
                     <p>法式甜點|外燴茶會|彌月蛋糕|婚禮小物</p>
@@ -1100,7 +1673,7 @@
                 </div>
             </div>
             <!-- 右方，map -->
-            <div class="col">
+            <div class="col-xl-6 col-md-12 ">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1820.6619895646586!2d120.66049340571386!3d24.125257918126103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dab4c5ebccb%3A0x9829944e0c89f4fe!2zQSBCIOazleWci-S6uueahOeUnOm7nuW6lw!5e0!3m2!1szh-TW!2stw!4v1552312874642"
                     width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -1147,6 +1720,10 @@
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
             },
         });
     </script>
