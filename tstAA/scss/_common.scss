@@ -1,0 +1,23 @@
+body {
+  font-family: 微軟正黑體;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.container{
+  min-width: 1590px;
+  max-width: 1920px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.clearfix{
+  clear: both;
+}
+
+
+// color
+$home_color: #110D28;
+$product_color: #0B1747;
