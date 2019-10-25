@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js"
+        integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc"
+        crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <h1>TST2</h1>
+    <script>
+        window.addEventListener('load', async () => {
+            if ('serviceWorker' in navigator) {
+                try {
+                    const registration = navigator.serviceWorker.register('/sw.js')
+                    console.log("TST註冊")
+                    console.log("註冊成功", registration)
+                } catch (e) {
+                    console.log("註冊失敗")
+                }
+
+            }
+        })
+
+        let installPromptEvent;
+
+        window.addEventListener('beforeinstallprompt', (event) => {
+            // Prevent Chrome <= 67 from automatically showing the prompt
+            event.preventDefault();
+            // Stash the event so it can be triggered later.
+            installPromptEvent = event;
+            // Update the install UI to notify the user app can be installed
+            document.querySelector('#install-button').disabled = false;
+        });
+        // installPromptEvent.prompt()
+
+        // window.addEventListener('beforeinstallprompt', function (e) {
+        //     // beforeinstallprompt event fired
+
+        //     e.userChoice.then(function (choiceResult) {
+        //         if (choiceResult.outcome === 'dismissed') {
+        //             console.log('用户取消安装应用');
+        //         }
+        //         else {
+        //             console.log('用户安装了应用');
+        //         }
+        //     });
+        // });
+
+
+        // 如果用戶無網路，彈窗通知
+        if (Notification.permission === "default") {
+            Notification.requestPermission()
+        }
+        if (!navigator.onLine) {
+            new Notification("= = |||", { body: "你沒網路" })
+        }
+        window.addEventListener('online', () => {
+            new Notification("GOD", { body: "終於回人間~~" })
+        })
+    </script>
+</body>
+
+</html>
