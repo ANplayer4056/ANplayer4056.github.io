@@ -58,7 +58,12 @@
             let oDiv = document.getElementById('touchDot');
             let safaa = document.getElementById('browser-safari');
 
+            let showAlert = true;
+
             oDiv.onmousedown = function (e) {
+
+                showAlert = true;
+
                 let disX = e.clientX - this.offsetLeft;
                 let disY = e.clientY - this.offsetTop;
 
@@ -78,6 +83,8 @@
                 */
                 document.onmousemove = function (ev) {
 
+                    showAlert = false;
+
                     let ll = ev.clientX - disX;
                     let tt = ev.clientY - disY;
 
@@ -92,6 +99,16 @@
 
                 // 不用 oDiv.onmouseup 是因為被擋住之後會無視掉遮擋的元素
                 document.onmouseup = function (ev) {
+
+                    let ll = ev.clientX - disX;
+                    let tt = ev.clientY - disY;
+                    console.log(showAlert)
+
+                    if (showAlert) {
+                        alert('AD')
+                    }
+                    console.log(showAlert)
+
                     document.onmousemove = document.onmouseup = null;
                     if (oDiv.releaseCapture) oDiv.releaseCapture();
                 }
@@ -123,7 +140,7 @@
                     oDiv.style.top = tt + 'px';
                 });
 
-                oDiv.addEventListener("ontouchend", (ev) => {
+                oDiv.addEventListener("touchend", (ev) => {
                     document.onmousemove = document.onmouseup = null;
                     if (oDiv.releaseCapture) oDiv.releaseCapture();
                 });
