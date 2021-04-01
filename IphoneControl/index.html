@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iphone 懸浮球</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="info">
+        <div class="left">
+            <i class="fas fa-wifi"></i>
+            <span>遠傳電信 5G </span>
+        </div>
+        <div class="right">
+            <span>100%</span>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <div class="iphoneBall" id="touchDot">
+        <div class="roll r1"></div>
+        <div class="roll r2"></div>
+        <div class="dot"></div>
+    </div>
+
+    <div class="footer">
+        <div class="tool">
+            <div class="icon phone"></div>
+            <div id="browser-safari" class="icon ">
+                <div class="safari"></div>
+            </div>
+            <div class="icon message"></div>
+            <div class="icon music"></div>
+        </div>
+    </div>
+
+    <script>
+
+        /**
+         * 文章: https://dddxxxlll.github.io/2017/04/11/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0div%E6%8B%96%E6%8B%BD%E5%B9%B6%E5%9C%A8%E4%BB%BB%E6%84%8F%E4%BD%8D%E7%BD%AE%E6%94%BE%E4%B8%8B/
+        */
+
+        /**
+         * 拖曳的時候有文字選中會有問題
+         * 原因: 瀏覽器默認拖曳文字的行為
+         * 解決: 標準瀏覽器下 >> 阻止默認行為，在 onmousedown 結尾加上 return false 即可
+         * !! ie8 及其以下版本 : 設置全局捕獲 setCapture 最後釋放 releaseCapture
+        */
+
+        window.onload = function () {
+            let oDiv = document.getElementById('touchDot');
+            let safaa = document.getElementById('browser-safari');
+
+            oDiv.onmousedown = function (e) {
+                let disX = e.clientX - this.offsetLeft;
+                let disY = e.clientY - this.offsetTop;
+
+                let winW = window.innerWidth;
+                let winH = window.innerHeight;
+
+                if (oDiv.setCapture) oDiv.setCapture();
+
+                // 使用 document.onmousemove 是因為快速拖曳的話，滑鼠鼠標會丟失
+                // 實測 >> oDiv.onmousemove 拖曳不順暢，只能慢速拖曳才沒問題
+
+                /**
+                 * 原理 : https://segmentfault.com/a/1190000015313127
+                 * 
+                 * 滑鼠移動太快 >> 造成觸發太多次 onmousemove 事件 >> 造成延遲
+                 * DOM 移動速度跟不上 >> 鼠標超出元素範圍 >> 觸發了 mouseout
+                */
+                document.onmousemove = function (ev) {
+
+                    let ll = ev.clientX - disX;
+                    let tt = ev.clientY - disY;
+
+                    if (ll < 0) ll = 0;
+                    if (tt < 0) tt = 0;
+                    if (ll + 60 > winW) ll = winW - 60;
+                    if (tt + 60 > winH) tt = winH - 60;
+
+                    oDiv.style.left = ll + 'px';
+                    oDiv.style.top = tt + 'px';
+                }
+
+                // 不用 oDiv.onmouseup 是因為被擋住之後會無視掉遮擋的元素
+                document.onmouseup = function (ev) {
+                    document.onmousemove = document.onmouseup = null;
+                    if (oDiv.releaseCapture) oDiv.releaseCapture();
+                }
+                return false;
+            }
+
+
+            // mobile
+            oDiv.addEventListener("touchstart", (e) => {
+                let disX = e.touches[0].clientX - oDiv.offsetLeft;
+                let disY = e.touches[0].clientY - oDiv.offsetTop;
+
+                let winW = window.innerWidth;
+                let winH = window.innerHeight;
+
+                if (oDiv.setCapture) oDiv.setCapture();
+
+                oDiv.addEventListener("touchmove", (ev) => {
+
+                    let ll = ev.touches[0].clientX - disX;
+                    let tt = ev.touches[0].clientY - disY;
+
+                    if (ll < 0) ll = 0;
+                    if (tt < 0) tt = 0;
+                    if (ll + 60 > winW) ll = winW - 60;
+                    if (tt + 60 > winH) tt = winH - 60;
+
+                    oDiv.style.left = ll + 'px';
+                    oDiv.style.top = tt + 'px';
+                });
+
+                oDiv.addEventListener("ontouchend", (ev) => {
+                    document.onmousemove = document.onmouseup = null;
+                    if (oDiv.releaseCapture) oDiv.releaseCapture();
+                });
+                return false;
+            });
+
+            safaa.onclick = function () {
+                window.open('https://www.google.com/', 'safari')
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('./image/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.iphoneBall {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(60, 60, 60, 0.8);
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    top: 70%;
+    z-index: 10;
+}
+
+.roll {
+    border: 1px solid #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.r1 {
+    width: 40px;
+    height: 40px;
+}
+
+.r2 {
+    width: 35px;
+    height: 35px;
+}
+
+.dot {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #fff;
+}
+
+.footer {
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.tool {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.icon {
+    width: 5vw;
+    height: 5vw;
+    max-width: 60px;
+    max-height: 60px;
+    min-width: 36px;
+    min-height: 36px;
+    background-color: #fff;
+    margin: 0 10px;
+    border-radius: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.phone {
+    background-image: url('./image/apple.png');
+}
+
+.safari {
+    background-image: url('./image/safari.png');
+    width: 4vw;
+    height: 4vw;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 26px;
+    min-height: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.message {
+    background-image: url('./image/message.png');
+}
+
+.music {
+    background-image: url('./image/music.png');
+}
+
+.info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 700;
+    font-family: '微軟正黑體';
+    width: 100%;
+}
