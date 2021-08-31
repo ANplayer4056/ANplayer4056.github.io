@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip-path 練習</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .logo {
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+
+        .triangle {
+            position: absolute;
+        }
+
+        .triangle:nth-child(1) {
+            background-color: #F7DFAE;
+            width: 10%;
+            height: 10%;
+            clip-path: polygon(25% 0, 0% 100%, 100% 100%);
+            top: 12%;
+            left: 34%;
+            transform: rotate(-20deg);
+        }
+
+        .triangle:nth-child(2) {
+            background-color: #F7DFAE;
+            width: 10%;
+            height: 10%;
+            clip-path: polygon(75% 0, 0% 100%, 100% 100%);
+            top: 12%;
+            left: 66%;
+            transform: rotate(18deg);
+        }
+
+        .triangle:nth-child(3) {
+            background-color: #F5D983;
+            width: 20%;
+            height: 30%;
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
+            top: 20%;
+            left: 40%;
+            transform: rotate(-20deg);
+        }
+
+        .triangle:nth-child(4) {
+            background-color: #F5D983;
+            width: 20%;
+            height: 30%;
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
+            top: 20%;
+            left: 50%;
+            transform: rotate(17deg);
+        }
+
+
+        .triangle:nth-child(5) {
+            background-color: #f7e4aa;
+            width: 20%;
+            height: 30%;
+            clip-path: polygon(0 0, 0 100%, 50% 0);
+            top: 18%;
+            left: 38%;
+            transform: rotate(-57deg);
+        }
+
+        .triangle:nth-child(6) {
+            background-color: #f7e4aa;
+            width: 20%;
+            height: 30%;
+            clip-path: polygon(50% 0, 100% 100%, 100% 0);
+            top: 18%;
+            left: 52%;
+            transform: rotate(54deg);
+        }
+
+        .triangle:nth-child(7) {
+            background-color: #faf3dd;
+            width: 20%;
+            height: 25%;
+            clip-path: polygon(20% 0, 100% 100%, 100% 43%);
+            top: 40%;
+            left: 35%;
+        }
+
+        .triangle:nth-child(8) {
+            background-color: #faf3dd;
+            width: 20%;
+            height: 25%;
+            clip-path: polygon(66% 0, 0 100%, 0 40%);
+            top: 41%;
+            left: 56%;
+        }
+
+        .triangle:nth-child(9) {
+            background-color: #F4D880;
+            width: 20%;
+            height: 22%;
+            clip-path: polygon(100% 100%, 0 75%, 30% 0);
+            top: 42%;
+            left: 33%;
+        }
+
+        .triangle:nth-child(10) {
+            background-color: #F4D880;
+            width: 20%;
+            height: 22%;
+            clip-path: polygon(100% 69%, 0 100%, 59% 0);
+            top: 43%;
+            left: 58%;
+        }
+
+        .triangle:nth-child(11) {
+            background-color: #fcbb6b;
+            width: 5%;
+            height: 30%;
+            clip-path: polygon(100% 100%, 0 100%, 100% 0);
+            top: 66%;
+            left: 51%;
+        }
+
+        .triangle:nth-child(12) {
+            background-color: #fcbb6b;
+            width: 5%;
+            height: 30%;
+            clip-path: polygon(100% 100%, 0 100%, 0 0);
+            top: 66%;
+            left: 56%;
+        }
+
+        .triangle:nth-child(13) {
+            background-color: #F4D880;
+            width: 25%;
+            height: 33%;
+            clip-path: polygon(87% 0%, 0 100%, 0 8%);
+            top: 61%;
+            left: 59%;
+            transform: rotate(-10deg);
+        }
+
+        .triangle:nth-child(14) {
+            background-color: #F4D880;
+            width: 25%;
+            height: 34%;
+            clip-path: polygon(99% 7%, 100% 97%, 8% -2%);
+            top: 61%;
+            left: 28%;
+            transform: rotate(10deg);
+        }
+
+        .triangle:nth-child(15) {
+            background-color: #f7e4aa;
+            width: 25%;
+            height: 35%;
+            clip-path: polygon(37% 0%, 100% 100%, 0 100%);
+            top: 61%;
+            left: 24%;
+        }
+
+        .triangle:nth-child(16) {
+            background-color: #F4D880;
+            width: 22%;
+            height: 35%;
+            clip-path: polygon(100% 0, 100% 100%, 50% 0);
+            top: 62%;
+            left: 0%;
+            transform: rotate(-5deg);
+        }
+
+        .triangle:nth-child(17) {
+            background-color: #F4D880;
+            width: 30%;
+            height: 35%;
+            clip-path: polygon(54% 0, 0 100%, 0 0);
+            top: 57%;
+            left: 6%;
+            transform: rotate(-47deg);
+        }
+
+        .triangle:nth-child(18) {
+            background-color: #faf3dd;
+            width: 25%;
+            height: 17%;
+            clip-path: polygon(66% 81%, -1% 76%, 102% 0%);
+            top: 52%;
+            left: -10%;
+            transform: rotate(-50deg);
+        }
+
+        .triangle:nth-child(19) {
+            background-color: #faf3dd;
+            width: 13%;
+            height: 22%;
+            clip-path: polygon(100% 93%, 24% 85%, 16% 0);
+            top: 42%;
+            left: 5%;
+            transform: rotate(-14deg);
+        }
+
+        .title {
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 0 3px #ED6E14, 0 0 10px #ED6E14;
+            position: absolute;
+            top: 30%;
+            left: -12%;
+            user-select: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="logo">
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <p class="title">Foxyy Lab</p>
+    </div>
+</body>
+
+</html>
