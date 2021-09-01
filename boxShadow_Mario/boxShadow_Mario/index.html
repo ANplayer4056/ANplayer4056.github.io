@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow Mario Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* w12 | h16 */
+        .icon_Mario {
+            width: 60px;
+            height: 80px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .icon_Mario::before {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            content: "";
+            box-shadow: 15px 0px red, 20px 0px red, 25px 0px red, 30px 0px red,
+                35px 0px red, 10px 5px red, 15px 5px red, 20px 5px red, 25px 5px red,
+                30px 5px red, 35px 5px red, 40px 5px red, 45px 5px red, 50px 5px red,
+                10px 10px #857a10, 15px 10px #857a10, 20px 10px #857a10, 25px 10px #fec89a, 30px 10px #fec89a,
+                35px 10px #857a10, 40px 10px #fec89a, 5px 15px #857a10, 10px 15px #fec89a, 15px 15px #857a10,
+                20px 15px #fec89a,25px 15px #fec89a,30px 15px #fec89a,35px 15px #857a10,40px 15px #fec89a,
+                45px 15px #fec89a,50px 15px #fec89a,5px 20px #857a10,10px 20px #fec89a,15px 20px #857a10,20px 20px #857a10,
+                25px 20px #fec89a,30px 20px #fec89a,35px 20px #fec89a,40px 20px #857a10,45px 20px #fec89a,50px 20px #fec89a,
+                55px 20px #fec89a,5px 25px #857a10,10px 25px #857a10,15px 25px #fec89a,20px 25px #fec89a,25px 25px #fec89a,30px 25px #fec89a,
+                35px 25px #857a10,40px 25px #857a10,45px 25px #857a10,50px 25px #857a10,
+                15px 30px #fec89a,20px 30px #fec89a,25px 30px #fec89a,30px 30px #fec89a,35px 30px #fec89a,40px 30px #fec89a,45px 30px #fec89a,
+                10px 35px #857a10,15px 35px #857a10,20px 35px red,25px 35px #857a10,30px 35px #857a10,35px 35px #857a10,
+                5px 40px #857a10,10px 40px #857a10,15px 40px #857a10,20px 40px red, 25px 40px #857a10,30px 40px #857a10,35px 40px red ,40px 40px #857a10,
+                45px 40px #857a10,50px 40px #857a10,0px 45px #857a10,5px 45px #857a10,10px 45px #857a10,15px 45px #857a10,
+                20px 45px red,25px 45px red,30px 45px red,35px 45px red,40px 45px #857a10,45px 45px #857a10,50px 45px #857a10,55px 45px #857a10,
+                0px 50px #fec89a,5px 50px #fec89a,10px 50px #857a10,15px 50px red,20px 50px #fec89a,25px 50px red,30px 50px red,35px 50px #fec89a,
+                40px 50px red,45px 50px #857a10,50px 50px #fec89a,55px 50px #fec89a,
+                0px 55px #fec89a,5px 55px #fec89a,10px 55px #fec89a,15px 55px red,20px 55px red,25px 55px red,30px 55px red,35px 55px red,40px 55px red,
+                45px 55px #fec89a,50px 55px #fec89a,55px 55px #fec89a,0px 60px #fec89a,5px 60px #fec89a,
+                10px 60px red,15px 60px red,20px 60px red,25px 60px red,30px 60px red,35px 60px red,40px 60px red,45px 60px red,50px 60px #fec89a,55px 60px #fec89a,
+                10px 65px red,15px 65px red,20px 65px red,35px 65px red,40px 65px red,45px 65px red,
+                5px 70px #857a10,10px 70px #857a10,15px 70px #857a10,40px 70px #857a10,45px 70px #857a10,50px 70px #857a10,
+                0px 75px #857a10,5px 75px #857a10,10px 75px #857a10,15px 75px #857a10,40px 75px #857a10,45px 75px #857a10,50px 75px #857a10,55px 75px #857a10;
+        }
+    </style>
+</head>
+
+<body>
+    <i class="icon_Mario"></i>
+    <h2>Mario</h2>
+</body>
+
+</html>
