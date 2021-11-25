@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Andy | Resume" />
+    <meta property="og:image" content="./image/view.JPG" />
+    <meta property="og:description" content="個人網站 | 履歷 | 作品集" />
+    <meta name="description" content="個人網站 | 履歷 | 作品集" />
+    <meta name="author" content="Andy" />
+    <link rel="shortcut icon" href="./image/resume.ico" />
+
+    <title>Andy | Resume</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="jumbotron">
+        <div class="helloGroup" data-aos="fade-right" data-aos-delay="500">
+            <img src="./image/symbol.png" alt="''" class="symbol">
+            <img src="./image/hi.png" alt="hi" class="hi">
+        </div>
+
+        <img src="./image/andy.png" alt="i'm andy" data-aos="zoom-in-down" data-aos-delay="1000" class="andy">
+
+        <img src="./image/scrollDown.png" alt="scroll down" class="scrollDown">
+    </header>
+
+    <main id="app">
+        <section class="infomation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 flexCenter">
+                        <img src="./image/avatar.jpg" alt="avatar" class="avatar">
+                    </div>
+                    <div class="col-md-8 col-sm-12 infoContent">
+                        <h2 class="name">{{ user.name }}</h2>
+                        <p class="title">{{ user.job }}</p>
+                        <p class="subTitle">{{ user.seniority }}</p>
+
+                        <div class="links">
+                            <p class="gmail">
+                                <i class="far fa-envelope icons"></i> <span>{{ user.gmail }}</span>
+                            </p>
+                            <a :href="user.gitweb" target="_blank">
+                                <i class="fab fa-github icons"></i> <span>{{ user.gitweb }}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" data-aos="fade-left">
+
+            <img src="./image/symbol2.png" alt="sybmol" data-aos="fade-down-right">
+
+            <div data-aos="fade-left" data-aos-delay="200" class="aboutMe">
+                <p>
+                    目前擁有兩年的網頁前端開發經驗，從早期自學前端框架(vue.js)，到協助公司導入前端框架，並透過框架結構協助建立公司的 front-end / back-end 等大型專案開發的經驗，專案中因無
+                    UI/UX
+                    工程師，所以也會視專案需求自行調整 RWD 自適應網頁的建置規劃，盡可能督促自己考慮到使用者體驗。
+                    <br>
+                    <br>
+                    雖然身為前端的角色，但也不排斥學習其他的技能，目前會利用些空閒時間與朋友互相教學(前後端交流)，所以會一點 Docker 的使用，並且正在學習 Golang
+                    語言及一些後端的技能，希望藉由學習一些後端技能，可以理解一些不同的處理邏輯。
+                    <br>
+                    <br>
+                    在未來，希望能夠加強補足前端的技術之外，也期許能夠將其經驗分享給更多人，讓自己能向資深工程師的路上持續邁進。
+                </p>
+            </div>
+        </section>
+
+        <section class="history">
+            <div v-for="item in experience" :key="item.id" data-aos="zoom-in-down" :data-aos-delay="item.delayS"
+                class="experienceCard">
+                <div class="titleBox">
+                    <span>
+                        <i class="fab fa-font-awesome-flag flagMark"></i>
+                        <span class="years">{{ item.years }}</span>
+                    </span>
+
+                    <div class="department">
+                        <img :src="item.img" alt="" class="logo">
+                        <div class="titleGroup">
+                            <span class="cardTitle">{{ item.title }}</span>
+                            <span class="cardSub">{{ item.subTitle }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p v-if="item.text != ''" class="experienceText">
+                    {{ item.text }}
+                </p>
+            </div>
+        </section>
+
+        <section class="skill">
+            <img src="./image/skill.png" alt="skill">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 skills">
+                    <div class="marksTitle">
+                        <span class="marks">
+                            前端技能
+                        </span>
+                    </div>
+                    <pre>
+HTML / CSS / JavaScript
+RWD 響應式網頁設計
+前端框架 Vue.js
+Element UI /  Bootstrap
+Axios / vue-router / Vuex
+ECharts
+vue-i18n
+                    </pre>
+                </div>
+                <div class="col-md-6 col-sm-12 skills">
+                    <div class="marksTitle">
+                        <span class="marks">
+                            其他技能 (略懂)
+                        </span>
+                    </div>
+                    <pre>
+Docker
+Golang
+mysql
+gorm
+git
+                    </pre>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="eventList">
+
+            <div data-aos="flip-down" class="itbox">
+                <a href="https://ithelp.ithome.com.tw/users/20120722/ironman/4157" target="_blank">
+                    <img src="./image/web.png" alt="ithome" class="ithome">
+                </a>
+                <div>
+                    <p class="cardTitle">IT邦幫忙 13th鐵人賽</p>
+                    <p class="cardText">
+                        參與了 2021 年 IT邦幫忙所舉辦的 13th 鐵人賽活動，撰寫 vue 框架的學習內容，分享如何上手 vue 框架並搭配小範例實作出作品，最後順利成功完賽。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div data-aos="fade-right" data-aos-delay="200" class="areaMark">
+            <span>作品集 | 練習</span>
+        </div>
+
+        <section class="portfolio">
+            <div v-for="item in frontendList" :key="item.id" class="frontendCard">
+                <a :href="item.url" target="_blank">
+                    <div class="viewsbox" v-bind:style="item.styleObj"></div>
+                </a>
+
+                <div class="textbox">
+                    <p class="cardTitle">{{ item.title }}</p>
+                    <p class="cardText">{{ item.text }}</p>
+                </div>
+            </div>
+
+            <div v-for="item in backendList" :key="item.id" class="backendCard">
+                <p class="cardTitle">{{ item.title }}</p>
+                <p class="cardText">{{ item.text }}</p>
+
+                <div class="btnList">
+                    <a :href="pro.url" target="_blank" v-for="pro in item.proj" :key="pro.id" class="webBtn">
+                        <i class="fab fa-github icons"></i>
+                        {{ pro.btnText }}
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Copyright © 2021 ANplayer4056. All rights reserved.
+        </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
